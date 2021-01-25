@@ -33,8 +33,8 @@ DEBUG = config('DEBUG',default=False,cast=bool)
 
 # para adicionar endereço dns
 # ... exemplo.com.br
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*','https://blog-djangopy.herokuapp.com']
+#blog-djangopy
 
 # Application definition
 
