@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %} Blog - Login {% endblock title %}
+
+{% block content %}
+    <div class="ml-auto mr-auto">
+        <div class="card">
+            <div class="card-header">
+                <h2>Login do sistema</h2> 
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    <button class="btn btn-outline-dark btn-block"type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock content %}
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+
+{% block title %} Blog - Login {% endblock title %}
+
+{% block content %}
+    <h2>SignUp do sistema</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="cadastre-se">
+        <button type="submit" >Login</button>
+    </form>
+
+
+{% endblock content %}

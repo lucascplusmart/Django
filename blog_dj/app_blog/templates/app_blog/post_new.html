@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% load static %}
+{% block header %}
+
+  <!-- Page Header -->
+  {% if object.image%}
+  <header class="masthead" style="background-image: url({{object.image.url}} )">
+  {%else%}
+  <header class="masthead" style="background-image: url({% static 'img/home-bg.jpg'%} )">
+
+  {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{ object.title }}</h1>
+            <span class="subheading">Blog desenvolvido em django</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{% endblock header %}
+
+{% block content %} 
+
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2>Novo Post</h2> 
+        </div>
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data"> 
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <input class="btn btn-outline-dark btn-block" type="submit" value='Cadastrar'>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
+

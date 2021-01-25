@@ -1,0 +1,5 @@
+*.ideia
+*.sqlite
+*pyc
+.DS_Store
+media
