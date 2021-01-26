@@ -35,6 +35,8 @@ DEBUG = config('DEBUG',default=False,cast=bool)
 # ... exemplo.com.br
 ALLOWED_HOSTS = ['*','https://blog-djangopy.herokuapp.com']
 #blog-djangopy
+# https://git.heroku.com/blog-djangopy.git
+# https://blog-django-py.herokuapp.com/ "
 
 # Application definition
 
